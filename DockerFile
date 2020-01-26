@@ -1,0 +1,6 @@
+FROM node:alpine
+RUN  mkdir -p /root/blog
+WORKDIR   /root/blog
+COPY  . .
+RUN     npm install
+CMD  ["node","app.js"]
