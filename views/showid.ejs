@@ -1,0 +1,38 @@
+<%- include('partials/header')  %>
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= blog.title %></div>
+    <div class="ui top attached ">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>">
+            <div class="content">
+                <span><%= blog.created.toDateString() %></span>
+            </div>
+            <div class="paragraph">
+                <p> <%= blog.body %> </p>
+            </div>
+            <a href="/blogs/<%= blog._id %>/edit ">Edit Blog</a>
+            <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button class="ui red basic">Delete</button>
+            </form>
+            <form action="/blogs/<%= blog._id %>/comments/new" ">
+                <button class="ui green basic">Add Comment</button>
+            </form>
+           
+        </div>
+        
+    </div>
+    
+    
+   
+</div>
+
+<div>
+    <% blog.comments.forEach(function(comment) { %>
+        <p>
+            <B><%= comment.author %></B> - <%= comment.content %>
+        </p>
+  <% }); %>
+</div>
+
+
+<%- include('partials/footer')  %>
