@@ -5,7 +5,7 @@ var express =  require("express"),
     local= require("passport-local"),
     mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/blog");
+mongoose.connect("mongodb://mongo:27017/blog");
 
 var blog= require("./models/blog.js");
 var user = require("./models/user.js");

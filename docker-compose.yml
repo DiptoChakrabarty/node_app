@@ -1,15 +1,19 @@
 version: "3"
 services: 
-    blog:
-      container_name: blog
-      restart: always
-      image: blog:v2
-      ports:
-        - "3000:3000"
-    mongo:
+  mongo:
       container_name: mongo
       image: mongo
       volumes:
         - .:/data/db
       ports:
-        - "27017:27017"
+        - "27020:27017"
+  blog:
+      container_name: blog
+      restart: always
+      image: blog:v3
+      links:
+        - mongo
+      ports:
+        - "3000:3000"
+     
+    
