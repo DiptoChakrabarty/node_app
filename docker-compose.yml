@@ -10,7 +10,7 @@ services:
   blog:
       container_name: blog
       restart: always
-      image: blog:v3
+      image: diptochakrabarty/blog:v3
       links:
         - mongo
       ports:
