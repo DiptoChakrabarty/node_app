@@ -1,4 +1,16 @@
-piVersion: apps/v1
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog
+spec:
+  selector:
+    app: blog
+  ports:
+    - port: 80
+      targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blog
@@ -13,7 +25,7 @@ spec:
         app: blog
     spec:
       containers:
-        - name: app
+        - name: blog
           image: diptochakrabarty/blog:v3
           ports:
             - containerPort: 3000
