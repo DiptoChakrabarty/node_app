@@ -29,7 +29,4 @@ spec:
           image: diptochakrabarty/blog:v3
           ports:
             - containerPort: 3000
-          env:
-            - name: MONGO_URL
-              value: mongodb://mongo:27017/dev
           imagePullPolicy: Always
