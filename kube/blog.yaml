@@ -4,25 +4,25 @@ metadata:
   name: blog
 spec:
   selector:
-    app: blog
+     app: blog
   ports:
     - port: 80
       targetPort: 3000
   type: LoadBalancer
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blog
+   name: blog
 spec:
-  replicas: 1
   selector:
-    matchLabels:
-      app: blog
+     matchLabels:
+       app: blog
   template:
     metadata:
-      labels:
-        app: blog
+         labels:
+            app: blog
     spec:
       containers:
         - name: blog
@@ -30,3 +30,5 @@ spec:
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
+              
+    
