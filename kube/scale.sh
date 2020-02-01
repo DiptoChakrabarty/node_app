@@ -31,3 +31,10 @@ kubectl get pods -n kube-system
 # Save Token 
 kubeadm token create --print-join-command
 kubeadm join 192.168.0.18:6443 --token rppnz7.rpsfyr44zh6ookc4     --discovery-token-ca-cert-hash sha256:00414fa1eab8fe5784f4d03baa5a1a13139f8cde6f6b1d5610ce92e713048600
+
+# Apply Networking
+kubectl apply -n kube-system -f \
+    "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+# Scaling the app
+kubectl scale --replicas=10 deployment blog
