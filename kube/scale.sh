@@ -38,3 +38,5 @@ kubectl apply -n kube-system -f \
 
 # Scaling the app
 kubectl scale --replicas=10 deployment blog
+
+kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces  # get all pods distributed in each node
