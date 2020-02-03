@@ -51,3 +51,7 @@ kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-
  repo_gpgcheck=1
  gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
         https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+        
+        
+ # DashBoard
+ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
