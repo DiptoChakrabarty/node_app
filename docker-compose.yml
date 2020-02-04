@@ -4,13 +4,13 @@ services:
       container_name: mongo
       image: mongo
       volumes:
-        - .:/data/db
+        - ./db:/data/db
       ports:
         - "27020:27017"
   blog:
       container_name: blog
       restart: always
-      image: diptochakrabarty/blog:v3
+      image: subrah
       links:
         - mongo
       ports:
