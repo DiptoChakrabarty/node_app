@@ -8,6 +8,7 @@ spec:
   ports:
     - port: 80
       targetPort: 3000
+      protocol: TCP
   type: LoadBalancer
 ---
 
@@ -26,7 +27,7 @@ spec:
     spec:
       containers:
         - name: blog
-          image: diptochakrabarty/blog:v3
+          image: diptochakrabarty/blog:v5
           ports:
             - containerPort: 3000
           imagePullPolicy: Always

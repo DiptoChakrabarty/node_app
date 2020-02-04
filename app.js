@@ -4,8 +4,24 @@ var express =  require("express"),
     passport = require("passport"),
     local= require("passport-local"),
     mongoose = require("mongoose");
+const PORT=process.env.PORT || 3000;
+/*
+try{
+    mongoose.connect("mongodb+srv://dipto:jHts1AvYlsU6flaP@cluster0-r7v18.mongodb.net/test?retryWrites=true&w=majority");
 
-mongoose.connect("mongodb://mongo:27017/blog");
+}
+
+catch(e){
+    console.log(e)
+}*/
+// mongoose.connection
+//         .once('open',()=>console.log("connected to db !!!!!!!!!!!!!"))
+//         .on('error',(error)=>console.log("connection to db failed!!!!!",error.msg))
+mongoose.connect("mongodb://mongo:27020/blog",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+    console.log("Database connected.")
+}).catch(err=>{
+    throw err;
+})
 
 var blog= require("./models/blog.js");
 var user = require("./models/user.js");
@@ -233,6 +249,6 @@ function isLoggedIn(req,res,next){
 
 
 
-app.listen(3000,function(){
+app.listen(PORT,function(){
     console.log("Server started in port 3000");
 });
