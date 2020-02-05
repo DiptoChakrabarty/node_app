@@ -60,4 +60,17 @@ kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-
  #Access Blog from outside
 kubectl expose deployment/blog
 kubectl port-forward --namespace default svc/blog 3000:3000
+
+# Prometheus using helm
+helm install stable/prometheus-operator --namespace monitoring --generate-name 
+
+kubectl create namespace monitoring
+helm install  my-release stable/prometheus-operator --set prometheusOperator.createCustomResource=false --namespace monitoring
+
+
+kubectl apply -f namespace.yml 
+  kubectl apply -f clusterRole.yaml 
+  kubectl apply -f configmap.yaml 
+  kubectl apply -f prometheus-deploy.yaml 
+
  
