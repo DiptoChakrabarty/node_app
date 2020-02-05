@@ -3,11 +3,12 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongo-pvc
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 256Mi
+      storage: 750Mi
 ---
 apiVersion: v1
 kind: Service
@@ -40,8 +41,8 @@ spec:
             - containerPort: 27017
           volumeMounts:
             - name: storage
-              mountPath: /data/db
+              mountPath: /db
       volumes:
         - name: storage
           persistentVolumeClaim:
-           claimName: mongo-pvc
+            claimName: mongo-pvc

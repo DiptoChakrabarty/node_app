@@ -11,13 +11,5 @@ spec:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: manual
-  local:
-    path: /db/mongo
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - kube-dev-nri-control-plane
+  hostPath:
+    path: "/db"
