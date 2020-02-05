@@ -73,4 +73,8 @@ kubectl apply -f namespace.yml
   kubectl apply -f configmap.yaml 
   kubectl apply -f prometheus-deploy.yaml 
 
+
+kubectl get pods -n monitoring
+kubectl get services -n monitoring
+
  
