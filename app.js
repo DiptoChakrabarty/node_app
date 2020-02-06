@@ -17,7 +17,7 @@ catch(e){
 // mongoose.connection
 //         .once('open',()=>console.log("connected to db !!!!!!!!!!!!!"))
 //         .on('error',(error)=>console.log("connection to db failed!!!!!",error.msg))
-mongoose.connect("mongodb://mongo:27020/blog",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+mongoose.connect("mongodb://localhost/blog",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log("Database connected.")
 }).catch(err=>{
     throw err;
