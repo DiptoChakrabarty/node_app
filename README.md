@@ -15,3 +15,12 @@
 - Docker 
 - Docker Compose
 - Kubernetes
+
+### How to Run Project
+
+#### Locally using node
+```
+- Clone Project
+- Enter project directory and run npm install
+- Run node  app.js
+- Server has started at port 3000
