@@ -31,7 +31,7 @@
 - Ensure docker and docker-compose is installed 
 - [Install docker on ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
 - Start services of docker and enable them
-- [Install docker compose](https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04/)
+- (Install docker compose)[https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04/]
 - There are two files a Dockerfile and docker-compose.yml
 - Dockerfile is used to create docker image
 - To run application run docker-compose up -d 
