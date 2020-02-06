@@ -29,10 +29,12 @@
 ### Run using Docker
 ```
 - Ensure docker and docker-compose is installed 
-- [Install docker on ubuntu](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04)
+- <a href="https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04" target="_blank">Install docker on ubuntu</a>
 - Start services of docker and enable them
-- [Install docker compose] (https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04)
+- <a href="https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04" target="_blank">Install docker compose on ubuntu</a>
 - There are two files a Dockerfile and docker-compose.yml
 - Dockerfile is used to create docker image
 - To run application run docker-compose up -d 
 - Go to localhost:3000
+
+
