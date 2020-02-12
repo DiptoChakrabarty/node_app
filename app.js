@@ -100,14 +100,30 @@ app.get("/blogs/:id",function(req,res){
 
 //Edit items
 app.get("/blogs/:id/edit",function(req,res){
-    blog.findById(req.params.id,function(err,found){
-        if(err){
-            res.redirect("/blogs");
-        }
-        else{
-            res.render("edit",{blog:found});
-        }
-    });
+    if (req.isAuthenticated()){
+        blog.findById(req.params.id,function(err,found){
+            if(err){
+                res.redirect("/blogs");
+            }
+            else{
+                
+              //  console.log(found.user._id);
+               // if(found.author.id.equals(req.user._id)){
+                res.render("edit",{blog:found});
+
+            //    }
+            //    else{
+              //          res.send("Invalid Permissions");
+               // }
+                
+            }
+        });
+
+    }
+    else{
+        res.redirect("/signin");
+    }
+    
     
 });
 
