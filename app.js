@@ -5,19 +5,9 @@ var express =  require("express"),
     local= require("passport-local"),
     mongoose = require("mongoose");
 const PORT=process.env.PORT || 3000;
-/*
-try{
-    mongoose.connect("mongodb+srv://dipto:jHts1AvYlsU6flaP@cluster0-r7v18.mongodb.net/test?retryWrites=true&w=majority");
 
-}
-
-catch(e){
-    console.log(e)
-}*/
-// mongoose.connection
-//         .once('open',()=>console.log("connected to db !!!!!!!!!!!!!"))
-//         .on('error',(error)=>console.log("connection to db failed!!!!!",error.msg))
 mongoose.connect("mongodb://localhost:27017/blog",{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
+
     console.log("Database connected.")
 }).catch(err=>{
     throw err;
