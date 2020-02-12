@@ -1,9 +1,12 @@
+var express = require("express");
+var router = express.Router();
+
 // Registrations Routes *********************//
 
 
 
 // signup user
-app.get("/signup",function(req,res){
+router.get("/signup",function(req,res){
     res.render("signup");
 });
 
@@ -24,11 +27,11 @@ user.register(new user({username: name}),pass,function(err,user){
 
 
 // signin user
-app.get("/signin",function(req,res){
+router.get("/signin",function(req,res){
 res.render("signin");
 });
 
-app.post("/signin",passport.authenticate("local",{
+router.post("/signin",passport.authenticate("local",{
 successRedirect: "/blogs",
 failureRedirect: "/signin"
 
@@ -37,7 +40,7 @@ failureRedirect: "/signin"
 
 
 //logout user
-app.get("/logout",function(req,res){
+router.get("/logout",function(req,res){
 req.logout();
 res.redirect("/");
 });
@@ -52,3 +55,5 @@ else{
 }
 
 }
+
+module.exports(router)

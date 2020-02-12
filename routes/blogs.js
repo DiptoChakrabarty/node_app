@@ -1,9 +1,12 @@
+var express = require("express");
+var router = express.Router();
+
 // setup REST routes
-app.get("/",function(req,res){
+router.get("/",function(req,res){
     res.render("auth");
 });
 
-app.get("/blogs",function(req,res){
+router.get("/blogs",function(req,res){
     blog.find({},function(err,blogs){
         if(err){
             console.log("Error");
@@ -16,12 +19,12 @@ app.get("/blogs",function(req,res){
 
 // New Route
 
-app.get("/blogs/new",function(req,res){
+router.get("/blogs/new",function(req,res){
     res.render("new");
 });
 
 // Post route
-app.post("/blogs",function(req,res){
+router.post("/blogs",function(req,res){
     blog.create(req.body.blog,function(err,newblog){
         if(err){
             res.render("new");
@@ -32,7 +35,7 @@ app.post("/blogs",function(req,res){
 });
 
 // Get by ID
-app.get("/blogs/:id",function(req,res){
+router.get("/blogs/:id",function(req,res){
     blog.findById(req.params.id).populate("comments").exec(function(err,found){
         if(err){
             res.redirect("/blogs");
@@ -44,7 +47,7 @@ app.get("/blogs/:id",function(req,res){
 });
 
 //Edit items
-app.get("/blogs/:id/edit",function(req,res){
+router.get("/blogs/:id/edit",function(req,res){
     if (req.isAuthenticated()){
         blog.findById(req.params.id,function(err,found){
             if(err){
@@ -74,7 +77,7 @@ app.get("/blogs/:id/edit",function(req,res){
 
 //Update items
 
-app.put("/blogs/:id",function(req,res){
+router.put("/blogs/:id",function(req,res){
         blog.findByIdAndUpdate(req.params.id,req.body.blog,function(err,updated){
             if(err){
                 res.redirect("/blogs");
@@ -87,7 +90,7 @@ app.put("/blogs/:id",function(req,res){
 });
 
 //Delete items
-app.delete("/blogs/:id",function(req,res){
+router.delete("/blogs/:id",function(req,res){
     blog.findByIdAndRemove(req.params.id,function(err){
         if(err){
             res.redirect("/blogs");
@@ -97,3 +100,5 @@ app.delete("/blogs/:id",function(req,res){
     });
 });
 
+
+module.exports(router)
