@@ -6,6 +6,7 @@
             <img class="ui centered rounded image" src="<%= blog.image %>">
             <div class="content">
                 <span><%= blog.created.toDateString() %></span>
+                <p>Submitted by <%= blog.author.username %></p>
             </div>
             <div class="paragraph">
                 <p> <%= blog.body %> </p>

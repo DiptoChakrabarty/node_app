@@ -1,6 +1,11 @@
 var express = require("express");
 var router = express.Router();
 
+
+var blog= require("../models/blog.js");
+var user = require("../models/user.js");
+var comment = require("../models/comment.js");
+
 // setup REST routes
 router.get("/",function(req,res){
     res.render("auth");
@@ -101,4 +106,18 @@ router.delete("/blogs/:id",function(req,res){
 });
 
 
-module.exports(router)
+
+//middleware code for checking user logged in or not
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    else{
+        res.redirect("/signin");
+    }
+    
+    }
+
+    
+
+module.exports= router;

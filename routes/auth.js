@@ -1,6 +1,15 @@
 var express = require("express");
 var router = express.Router();
 
+var body = require("body-parser");
+var local= require("passport-local");
+
+var blog= require("../models/blog.js");
+var user = require("../models/user.js");
+var comment = require("../models/comment.js");
+
+
+var passport = require("passport");
 // Registrations Routes *********************//
 
 
@@ -8,12 +17,14 @@ var router = express.Router();
 // signup user
 router.get("/signup",function(req,res){
     res.render("signup");
+    console.log("User SignUp Page");
 });
 
 
-app.post("/signup",function(req,res){
-var name = req.body.username;
-var pass =  req.body.password;
+router.post("/signup",function(req,res){
+    var name = req.body.username;
+    var pass =  req.body.password;
+    console.log(name,pass);
 user.register(new user({username: name}),pass,function(err,user){
     if(err){
         console.log(err);
@@ -32,10 +43,14 @@ res.render("signin");
 });
 
 router.post("/signin",passport.authenticate("local",{
+    
+
 successRedirect: "/blogs",
-failureRedirect: "/signin"
+failureRedirect: "/signup"
+
 
 }),function(req,res){
+    
 });
 
 
@@ -45,15 +60,18 @@ req.logout();
 res.redirect("/");
 });
 
+
 //middleware code for checking user logged in or not
 function isLoggedIn(req,res,next){
-if(req.isAuthenticated()){
-    return next();
-}
-else{
-    res.redirect("/signin");
-}
+    if(req.isAuthenticated()){
+        return next();
+    }
+    else{
+        res.redirect("/signin");
+    }
+    
+    }
 
-}
+    
 
-module.exports(router)
+module.exports= router;

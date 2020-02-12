@@ -1,6 +1,10 @@
 var express = require("express");
 var router = express.Router();
 
+var blog= require("../models/blog.js");
+var user = require("../models/user.js");
+var comment = require("../models/comment.js");
+
 //Comments Route
 
 router.get("/blogs/:id/comments/new",isLoggedIn,function(req,res){
@@ -46,4 +50,18 @@ router.post("/blogs/:id/comments",isLoggedIn,function(req,res){
 });
 
 
-module.exports(router)
+
+//middleware code for checking user logged in or not
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    else{
+        res.redirect("/signin");
+    }
+    
+    }
+
+    
+
+module.exports= router;
