@@ -13,6 +13,11 @@ mongoose.connect("mongodb://localhost:27017/blog",{useNewUrlParser:true,useUnifi
     throw err;
 })
 
+
+var commentsroutes= require("./routes/comments"),
+    authroute = require("./routes/auth"),
+    blogroute = require("./routes/blogs");
+
 var blog= require("./models/blog.js");
 var user = require("./models/user.js");
 var comment = require("./models/comment.js");
