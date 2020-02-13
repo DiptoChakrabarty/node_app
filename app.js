@@ -122,11 +122,19 @@ app.get("/blogs/:id/edit",function(req,res){
                 res.redirect("/blogs");
             }
             else{
+                //console.log(found.author.id);
+                //console.log(req.user._id);
+                if(found.author.id.equals(req.user._id)){
+                    res.render("edit",{blog:found});
+
+                }else{
+                    console.log("You do not have authorization");
+                    res.redirect("/blogs");
+                }
                 
               //  console.log(found.user._id);
                // if(found.author.id.equals(req.user._id)){
-                res.render("edit",{blog:found});
-
+                
             //    }
             //    else{
               //          res.send("Invalid Permissions");
