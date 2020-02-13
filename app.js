@@ -115,41 +115,15 @@ app.get("/blogs/:id",function(req,res){
 });
 
 //Edit items
-app.get("/blogs/:id/edit",function(req,res){
-    if (req.isAuthenticated()){
+app.get("/blogs/:id/edit",checkusers,function(req,res){
+    
         blog.findById(req.params.id,function(err,found){
-            if(err){
-                res.redirect("/blogs");
-            }
-            else{
-                //console.log(found.author.id);
-                //console.log(req.user._id);
-                if(found.author.id.equals(req.user._id)){
+            
                     res.render("edit",{blog:found});
+                
+            });
+    });
 
-                }else{
-                    console.log("You do not have authorization");
-                    res.redirect("/blogs");
-                }
-                
-              //  console.log(found.user._id);
-               // if(found.author.id.equals(req.user._id)){
-                
-            //    }
-            //    else{
-              //          res.send("Invalid Permissions");
-               // }
-                
-            }
-        });
-
-    }
-    else{
-        res.redirect("/signin");
-    }
-    
-    
-});
 
 //Update items
 
@@ -284,6 +258,34 @@ function isLoggedIn(req,res,next){
     }
     
     }
+
+function checkusers(req,res,next){
+    if (req.isAuthenticated()){
+        blog.findById(req.params.id,function(err,found){
+            if(err){
+                res.redirect("/blogs");
+            }
+            else{
+            
+                if(found.author.id.equals(req.user._id)){
+                    next();
+
+                }else{
+                    console.log("You do not have authorization");
+                    res.redirect("/blogs");
+                }
+                
+              
+            }
+        });
+
+    }
+    else{
+        res.redirect("/blogs");
+    }
+    
+
+}
 
     
 
