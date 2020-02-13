@@ -11,10 +11,12 @@
             <div class="paragraph">
                 <p> <%= blog.body %> </p>
             </div>
+            <% if(currentuser && blog.author.id.equals(currentuser._id)){ %>
             <a href="/blogs/<%= blog._id %>/edit ">Edit Blog</a>
             <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
                 <button class="ui red basic">Delete</button>
             </form>
+            <%  }%>
             <form action="/blogs/<%= blog._id %>/comments/new" ">
                 <button class="ui green basic">Add Comment</button>
             </form>

@@ -40,7 +40,7 @@ app.use(methodOverride("_method"));
 
 app.set("view engine","ejs");
 
-seedDB();
+//seedDB();
 
 
 // Passport Configuration
@@ -140,7 +140,7 @@ app.put("/blogs/:id",function(req,res){
 });
 
 //Delete items
-app.delete("/blogs/:id",function(req,res){
+app.delete("/blogs/:id",checkusers,function(req,res){
     blog.findByIdAndRemove(req.params.id,function(err){
         if(err){
             res.redirect("/blogs");
