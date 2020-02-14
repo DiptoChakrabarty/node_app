@@ -36,6 +36,9 @@
         </p>
 
         <a href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
+        <form action="/blogs/<%= blog._id %>/comms/<%= comment._id %>?_method=DELETE" method="POST">
+                <button>Delete Comment</button>
+        </form>
   <% }); %>
 
  

@@ -232,6 +232,21 @@ app.put("/blogs/:id/comms/:commet_id",function(req,res){
       
 });
 
+app.delete("/blogs/:id/comms/:commet_id",function(req,res){
+    var comment_id = req.params.commet_id;
+    var blog_id = req.params.id;
+    
+    comment.findByIdAndDelete(comment_id,function(err){
+        if(err){
+            res.redirect("/blogs");
+            console.log("Wrong Comment");
+        }
+        else{
+            res.redirect("/blogs");
+        }
+    });
+      
+});
 
 
 // signup user
