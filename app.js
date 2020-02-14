@@ -199,6 +199,11 @@ app.post("/blogs/:id/comments",isLoggedIn,function(req,res){
 });
 
 
+app.get("/blogs/:id/comms/:commet_id/edit",function(req,res){
+      res.send("Your new comment");
+});
+
+
 
 // signup user
 app.get("/signup",function(req,res){

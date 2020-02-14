@@ -34,7 +34,11 @@
         <p>
             <B><%= comment.author %></B> - <%= comment.content %>
         </p>
+
+        <a href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
   <% }); %>
+
+ 
 </div>
 
 
