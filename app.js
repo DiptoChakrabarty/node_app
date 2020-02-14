@@ -200,7 +200,36 @@ app.post("/blogs/:id/comments",isLoggedIn,function(req,res){
 
 
 app.get("/blogs/:id/comms/:commet_id/edit",function(req,res){
-      res.send("Your new comment");
+    var comment_id = req.params.commet_id;
+    var blog_id = req.params.id;
+    comment.findById(comment_id,function(err,foundcomment){
+        if(err){
+            res.redirect("/blogs");
+            console.log("Wrong Comment");
+        }
+        else{
+            res.render("comm_edit",{comments_id:comment_id,comments:foundcomment,blog_id:blog_id});
+        }
+    });
+      
+});
+
+
+app.put("/blogs/:id/comms/:commet_id",function(req,res){
+    var comment_id = req.params.commet_id;
+    var blog_id = req.params.id;
+    var new_comment = req.body.comment;
+    console.log(new_comment);
+    comment.findByIdAndUpdate(comment_id,new_comment,function(err,updatecomment){
+        if(err){
+            res.redirect("/blogs");
+            console.log("Wrong Comment");
+        }
+        else{
+            res.redirect("/blogs");
+        }
+    });
+      
 });
 
 
