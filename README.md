@@ -29,9 +29,7 @@
 ### Run using Docker
 ```
 - Ensure docker and docker-compose is installed 
-- <a href="https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04" target="_blank">Install docker on ubuntu</a>
 - Start services of docker and enable them
-- <a href="https://linuxize.com/post/how-to-install-and-use-docker-compose-on-ubuntu-18-04" target="_blank">Install docker compose on ubuntu</a>
 - There are two files a Dockerfile and docker-compose.yml
 - Dockerfile is used to create docker image
 - To run application run docker-compose up -d 
@@ -40,6 +38,8 @@
 ```
 
 ### Run using Kubernetes
+
+#### Minikube
 ```
 - Ensure you have minikube installed
 - All kubernetes files are present in kube folder
@@ -48,5 +48,18 @@
 - Check pods status using kubectl get pods
 
 ```
+
+#### Cluster
+----
+
+- In master node 
+    * kubeadm init --apiserver-advertise-address $(hostname -i)
+    * mkdir -p $HOME/.kube
+    * sudo cp /etc/kubernetes/admin.conf $HOME/
+    * sudo chown $(id -u):$(id -g) $HOME/admin.conf
+    * export KUBECONFIG=$HOME/admin.conf
+    * echo "export KUBECONFIG=$HOME/admin.conf" | tee -a ~/.bashrc
+
+````
 
 
