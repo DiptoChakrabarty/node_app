@@ -59,6 +59,17 @@
     * sudo chown $(id -u):$(id -g) $HOME/admin.conf
     * export KUBECONFIG=$HOME/admin.conf
     * echo "export KUBECONFIG=$HOME/admin.conf" | tee -a ~/.bashrc
+    * Apply networking using kubectl apply -n kube-system -f \
+    "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+    * Check master node status using  kubectl get pods -n kube-system
+
+- Worker nodes
+    * Connect to master nodes using master node token 
+    * mkdir -p $HOME/.kube
+    * sudo cp /etc/kubernetes/admin.conf $HOME/
+    * sudo chown $(id -u):$(id -g) $HOME/admin.conf
+    * export KUBECONFIG=$HOME/admin.conf
+
 
 ````
 
