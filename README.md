@@ -37,4 +37,16 @@
 - To run application run docker-compose up -d 
 - Go to localhost:3000
 
+```
+
+### Run using Kubernetes
+```
+- Ensure you have minikube installed
+- All kubernetes files are present in kube folder
+- Run kubectl apply -f kube 
+- This creates all the pods required
+- Check pods status using kubectl get pods
+
+```
+
 
