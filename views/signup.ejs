@@ -1,6 +1,50 @@
-<form action="/signup" method=POST>
-    <input type="text" name="username" placeholder="Name">
-    <input type="password" name="password" placeholder="Password">
-    <button>Submit</button>
+<%- include('partials/auth')  %>
+       
+
+<div class="container">
+
+<form action="/signup" method="post" class="signup-form" id="contact">
+    <div class="form-body">
+
+   
+    <h2>Sign Up</h2>
+         
+            <fieldset>
+                <input name="username" id="name"  placeholder="Name" type="text"
+                tabindex="1" required autofocus>
+                <label for="name"></label>
+                </fieldset>
     
-    </form>
+                <fieldset>
+                    <input placeholder="Email" type="email" tabindex="3" required>
+                    <label for="email"></label>
+                </fieldset>
+                
+                <fieldset>
+                    <input placeholder="Mobile Number" type="tel" tabindex="4" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label><input type="radio" name="hosting" value="yes" /> Male</label>
+                        <label><input type="radio" name="hosting" value="no" /> Female</label>
+                    </fieldset>
+            
+        
+                    <fieldset>
+                    <label>Date Of Birth</label>
+                    <input name="" type="date" placeholder="Your Dae Of Birth" type="date" required>
+                    </fieldset>
+
+            <fieldset>
+                <input name="password" placeholder="password" type="password" tabindex="3" required>
+                <label for="password"></label>
+            </fieldset>
+         
+          <p>
+              <input type="submit" value="Create My Account" id="submit" class="btn">
+          </p>
+        </div>
+      </form>
+
+    </div>
+        <%- include('partials/footer')  %>
