@@ -4,15 +4,15 @@
   <form class="ui form" action="/blogs" method="POST">
     <div class="field">
       <label>Title</label>
-      <input type="text" name="blog[title]" placeholder="Title" />
+      <input type="text" name="blog[title]" placeholder="Title" required />
     </div>
     <div class="field">
       <label>Image</label>
-      <input type="text" name="blog[image]" placeholder="Image" />
+      <input type="text" name="blog[image]" placeholder="Image" required />
     </div>
     <div class="field">
       <label>Description</label>
-      <textarea name="blog[body]" cols="30" rows="10"></textarea>
+      <textarea name="blog[body]" cols="30" rows="10" required></textarea>
     </div>
 
     <input class="ui violet big basic button" type="submit" />
