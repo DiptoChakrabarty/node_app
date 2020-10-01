@@ -23,4 +23,40 @@ body {
   width: 90vw;
   justify-content: center;
 }
-
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  min-height: 250px;
+  max-height: 350px;
+  background: #1b7165;
+  border-radius: 10px;
+  word-break: break-word;
+  margin: 10px;
+  padding: 1em;
+  overflow: hidden;
+}
+.blog-card-title {
+  text-align: center;
+}
+.blog-card-content {
+  font-size: 15px;
+  text-align: start;
+  padding: 0 0 0 10px;
+}
+.blog-card-link {
+  max-width: 110px;
+  color: #fff;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  border: 2px #e2eff5 solid;
+}
+.blog-card-link:hover {
+  background: #50a3a2;
+  color: #fff;
+}
