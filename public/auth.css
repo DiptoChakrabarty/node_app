@@ -1,22 +1,21 @@
-*
-{
-    font-family: 'Roboto', sans-serif;
+/*GENERAL STYLES*/
+* {
         padding: 0;
         box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
 }
-body
-    {
-        
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 30px;
-        color: rgb(235, 90, 6);
-        background: #e7d106;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: #0e1515;
+  overflow: hidden;
     }
-.container
-    {
+
+.container {
         max-width: 500px;
         width: 100%;
         margin: 0 auto;position: relative;
