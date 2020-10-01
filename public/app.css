@@ -32,7 +32,7 @@ body {
   width: 300px;
   min-height: 250px;
   max-height: 350px;
-  background: #1b7165;
+  background: #1d5e65;
   border-radius: 10px;
   word-break: break-word;
   margin: 10px;
@@ -49,12 +49,12 @@ body {
 }
 .blog-card-link {
   max-width: 110px;
-  color: #fff;
+  color: black;
   padding: 12px;
   font-size: 14px;
   border-radius: 10px;
   transition: background-color 0.5s ease;
-  border: 2px #e2eff5 solid;
+  background: #fff;
 }
 .blog-card-link:hover {
   background: #50a3a2;
