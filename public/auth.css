@@ -51,23 +51,18 @@ fieldset
         padding: 0;
         width: 100%;
     }
-    #contact input[type="text"],
-    #contact input[type="email"],
-    #contact input[type="tel"],
-    #contact input[type="date"],
-    #contact input[type="password"],
-    #contact textarea
-    {
-        font-family: 'Roboto', sans-serif;
-        width: 100%;
-        border: 1px solid rgb(204, 204, 204);
-        background: #FFF;
-        margin: 0 0 5px;
-        padding: 10px;
+/*SIGN IN STYLES*/
+.signin-link {
+  text-decoration: solid;
+  color: #fff;
+  background: green;
+  padding: 6px 15px;
+  border-radius: 25px;
+  transition: background-color 0.5s ease;
     }
-   .btn
-    {
-        font-family: 'Roboto', sans-serif;cursor: pointer;
+.signin-link:hover {
+  background: #50a3a2;
+}
         width: 100%;
         border: none;
         background: #06c406;
