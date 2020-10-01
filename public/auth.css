@@ -79,11 +79,9 @@ fieldset
 .btn:hover {
   background: #50a3a2;
     }
-    .dropdown-content
-    {
-        font-family: 'Roboto', sans-serif;
+.dropdown-content {
         width: 100%;
-        border: 1px solid #CCC;
+  border: 1px solid #ccc;
         background: rgb(255, 255, 255);
         margin: 0 0 5px;
         padding: 10px;
