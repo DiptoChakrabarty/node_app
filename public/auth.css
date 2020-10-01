@@ -34,12 +34,10 @@ body {
   font-size: 2em;
   text-align: center;
     }
-    #contact h4
-    {
-        font-family: 'Roboto', sans-serif;
-        margin: 5px 0 15px;
-        display: block;
-        font-size: 13px;
+/*Fieldset styles*/
+.fieldset {
+  border: none;
+  margin: 0 0 10px;
     }
 /*SIGN-UP INPUT STYLES*/
 .signup-form-input {
