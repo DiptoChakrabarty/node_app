@@ -76,3 +76,23 @@ BLOG ENTRY PAGE STYLES
 .ui[class*="top fixed"].menu {
   position: relative;
 }
+
+/***********************************************
+************************************************
+BLOG COMMENT PAGE STYLES
+************************************************
+************************************************/
+.comment-btn {
+  background: #084e9e;
+  padding: 10px;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 15px 0 0 0;
+  transition: background-color 0.5s ease;
+}
+.comment-btn:hover {
+  background: #3ad863;
+}
