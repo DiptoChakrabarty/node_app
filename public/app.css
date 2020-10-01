@@ -72,6 +72,7 @@ BLOG SUMMARY PAGE STYLES
 BLOG ENTRY PAGE STYLES
 ************************************************
 ************************************************/
-.blog-nav {
-  color: red;
+.ui.fixed.menu,
+.ui[class*="top fixed"].menu {
+  position: relative;
 }
