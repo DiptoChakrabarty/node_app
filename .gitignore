@@ -5,3 +5,5 @@ mongo-claim0-persistentvolumeclaim.yaml
 storage.bson
 /diagnostic.data
 Wired*
+debug.log
+.vscode/
