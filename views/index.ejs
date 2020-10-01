@@ -1,17 +1,12 @@
-<%- include('partials/header')  %>
+<%- include('partials/header') %>
 <h1>Welcome to Forum</h1>
 
-
 <% blogs.forEach(function(blog) { %>
-    <div>
-        <h2><%= blog.title %></h2>
-        <img src="<%= blog.image %>">
-        <p> <%= blog.body.substring(0,100) %> </p>
-        <a href="/blogs/<%= blog._id %>">....Read More</a>
-        
-    </div>
+<article>
+  <h2><%= blog.title %></h2>
+  <img src="<%= blog.image %>" />
+  <p><%= blog.body.substring(0,100) %></p>
+  <a href="/blogs/<%= blog._id %>">....Read More</a>
+</article>
 
-<% }) %>
-
-
-<%- include('partials/footer')  %>
+<% }) %> <%- include('partials/footer') %>
