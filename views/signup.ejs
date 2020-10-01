@@ -1,51 +1,99 @@
-<%- include('partials/auth')  %>
-       
+<%- include('partials/auth') %>
 
 <div class="container">
-
-<form action="/signup" method="post" class="signup-form" id="contact">
+  <form action="/signup" method="post" class="signup-form">
     <div class="form-body">
+      <h2 class="form-title">sign up</h2>
 
-   
-    <h2>Sign Up</h2>
-         
-            <fieldset>
-                <input name="username" id="name"  placeholder="Name" type="text"
-                tabindex="1" required autofocus>
-                <label for="name"></label>
-                </fieldset>
-    
-                <fieldset>
-                    <input placeholder="Email" type="email" tabindex="3" required>
-                    <label for="email"></label>
-                </fieldset>
-                
-                <fieldset>
-                    <input placeholder="Mobile Number" type="tel" tabindex="4" required>
-                    </fieldset>
+      <fieldset class="fieldset">
+        <input
+          class="signup-form-input"
+          name="username"
+          id="name"
+          placeholder="Name"
+          type="text"
+          tabindex="1"
+          required
+          autofocus
+        />
+        <label for="name"></label>
+      </fieldset>
 
-                    <fieldset>
-                        <label><input type="radio" name="hosting" value="yes" /> Male</label>
-                        <label><input type="radio" name="hosting" value="no" /> Female</label>
-                    </fieldset>
-            
-        
-                    <fieldset>
-                    <label>Date Of Birth</label>
-                    <input name="" type="date" placeholder="Your Dae Of Birth" type="date" required>
-                    </fieldset>
+      <fieldset class="fieldset">
+        <input
+          class="signup-form-input"
+          placeholder="Email"
+          type="email"
+          tabindex="3"
+          required
+        />
+        <label for="email"></label>
+      </fieldset>
 
-            <fieldset>
-                <input name="password" placeholder="password" type="password" tabindex="3" required>
-                <label for="password"></label>
-            </fieldset>
-         
-          <p>
-              <input type="submit" value="Create My Account" id="submit" class="btn">
-          </p>
-          <h3>Have an account click <a href="/signin">"here"</a></h3>
-        </div>
-      </form>
+      <fieldset class="fieldset">
+        <input
+          class="signup-form-input"
+          placeholder="Mobile Number"
+          type="tel"
+          tabindex="4"
+          required
+        />
+      </fieldset>
 
+      <fieldset class="fieldset">
+        <label><input type="radio" name="hosting" value="yes" /> Male</label>
+        <label><input type="radio" name="hosting" value="no" /> Female</label>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <label>Date Of Birth</label>
+        <input
+          class="signup-form-input"
+          name=""
+          type="date"
+          placeholder="Your Dae Of Birth"
+          type="date"
+          required
+        />
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <input
+          class="signup-form-input"
+          name="password"
+          placeholder="Password"
+          type="password"
+          tabindex="3"
+          required
+        />
+        <label for="password"></label>
+      </fieldset>
+
+      <p>
+        <input
+          class="signup-form-input btn"
+          type="submit"
+          value="Create My Account"
+          id="submit"
+        />
+      </p>
+      <h3>
+        Have an account? <a class="signin-link" href="/signin">Sign In</a>
+      </h3>
     </div>
-        <%- include('partials/footer')  %>
+  </form>
+
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+<%- include('partials/footer') %>
