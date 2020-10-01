@@ -96,3 +96,9 @@ BLOG COMMENT PAGE STYLES
 .comment-btn:hover {
   background: #3ad863;
 }
+.btn-delete {
+  background: red;
+}
+.comment-btn:hover.btn-delete {
+  background: #ea5353;
+}
