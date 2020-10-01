@@ -1,12 +1,11 @@
 <%- include('partials/header') %>
 <h1 class="blog-forum">Welcome to Forum</h1>
 <div class="principal-container">
-<article>
-  <h2><%= blog.title %></h2>
-  <img src="<%= blog.image %>" />
+  <ul class="blog-card-container">
   <p><%= blog.body.substring(0,100) %></p>
   <a href="/blogs/<%= blog._id %>">....Read More</a>
 </article>
 
 <% }) %> <%- include('partials/footer') %>
+  </ul>
 </div>
