@@ -102,3 +102,27 @@ BLOG COMMENT PAGE STYLES
 .comment-btn:hover.btn-delete {
   background: #ea5353;
 }
+.edit-blog {
+  font-size: 18px;
+  margin: 0px 0px 0 8px;
+}
+/*COMMENT STYLES*/
+.comment-body {
+  color: #fff;
+}
+.comment-author {
+  font-size: 24px;
+}
+.comment-content {
+  font-size: 20px;
+}
+.comment-box {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 0 10px 0;
+}
+.comment-box a {
+  color: #fff;
+}

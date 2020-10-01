@@ -12,9 +12,9 @@
                 <p> <%= blog.body %> </p>
             </div>
             <% if(currentuser && blog.author.id.equals(currentuser._id)){ %>
-            <a href="/blogs/<%= blog._id %>/edit ">Edit Blog</a>
+            <a  class="edit-blog"href="/blogs/<%= blog._id %>/edit ">Edit Blog</a>
             <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
-                <button class="ui red basic comment-btn btn-delete">Delete</button>
+                <button class="ui red basic comment-btn btn-delete">Delete Blog</button>
             </form>
             <%  }%>
             <form action="/blogs/<%= blog._id %>/comments/new" ">
@@ -31,13 +31,15 @@
 
 <div>
     <% blog.comments.forEach(function(comment) { %>
-        <p>
-            <B><%= comment.author %></B> - <%= comment.content %>
+        <p class="comment-body">
+            <span class="comment-author"><%= comment.author %>: </span> <span class="comment-content">"<%= comment.content%>"<span>
         </p>
-
-        <a href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
-        <form action="/blogs/<%= blog._id %>/comms/<%= comment._id %>?_method=DELETE" method="POST">
-                <button>Delete Comment</button>
+        
+        <div class="comment-box">
+            <a  class="comment-btn" href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
+            <form action="/blogs/<%= blog._id %>/comms/<%= comment._id %>?_method=DELETE" method="POST">
+                <button class="comment-btn btn-delete">Delete Comment</button>
+        </div>
         </form>
   <% }); %>
 
