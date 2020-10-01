@@ -2,7 +2,6 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #fff;
   background: #0e1515;
 }
 /***********************************************
@@ -15,9 +14,11 @@ BLOG SUMMARY PAGE STYLES
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 }
 .blog-forum {
   text-align: center;
+  color: #fff;
 }
 /*BLOG CARD STYLES*/
 .blog-card-container {
@@ -65,4 +66,12 @@ BLOG SUMMARY PAGE STYLES
 .blog-card-link:hover {
   background: #50a3a2;
   color: #fff;
+}
+/***********************************************
+************************************************
+BLOG ENTRY PAGE STYLES
+************************************************
+************************************************/
+.blog-nav {
+  color: red;
 }
