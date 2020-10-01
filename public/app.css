@@ -1,4 +1,9 @@
-.blognav{
-    margin-bottom: 700px;
+/*PRINCIPAL STYLES*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background: #0e1515;
+}
 }
 
