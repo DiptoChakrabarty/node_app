@@ -1,7 +1,7 @@
 /*GENERAL STYLES*/
 * {
-        padding: 0;
-        box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   display: flex;
@@ -13,13 +13,12 @@ body {
   color: #fff;
   background: #0e1515;
   overflow: hidden;
-    }
+}
 
 .container {
-        max-width: 500px;
-        width: 100%;
-        margin: 0 auto;position: relative;
-    }
+  max-width: 500px;
+  width: 100%;
+}
 /*SIGN-UP STYLES*/
 .signup-form {
   padding: 0px;
@@ -28,20 +27,20 @@ body {
   justify-content: center;
   z-index: 5;
   position: relative;
-    }
+}
 .form-title {
   text-transform: capitalize;
   font-size: 2em;
   text-align: center;
-    }
+}
 /*Fieldset styles*/
 .fieldset {
   border: none;
   margin: 0 0 10px;
-    }
+}
 /*SIGN-UP INPUT STYLES*/
 .signup-form-input {
-        width: 100%;
+  width: 100%;
   border: 1px solid transparent;
   background: #efeaea;
   outline: 0;
@@ -53,7 +52,7 @@ body {
 }
 .signup-form-input:hover {
   background-color: rgb(253 252 252);
-    }
+}
 /*SIGN IN STYLES*/
 .signin-link {
   text-decoration: solid;
@@ -62,33 +61,33 @@ body {
   padding: 6px 15px;
   border-radius: 25px;
   transition: background-color 0.5s ease;
-    }
+}
 .signin-link:hover {
   background: #50a3a2;
 }
 /*BUTTON STYLES*/
 .btn {
   cursor: pointer;
-        width: 100%;
-        border: none;
+  width: 100%;
+  border: none;
   background: #084e9e;
   color: #fff;
-        padding: 15px;
+  padding: 15px;
   font-size: 16px;
   border-radius: 25px;
   text-align: center;
   transition: background-color 0.5s ease;
-    }
+}
 .btn:hover {
   background: #50a3a2;
-    }
+}
 .dropdown-content {
-        width: 100%;
+  width: 100%;
   border: 1px solid #ccc;
-        background: rgb(255, 255, 255);
-        margin: 0 0 5px;
-        padding: 10px;
-    }
+  background: rgb(255, 255, 255);
+  margin: 0 0 5px;
+  padding: 10px;
+}
 /*BACKGROUND BUBBLES STYLES*/
 .bg-bubbles {
   position: absolute;
