@@ -7,3 +7,4 @@ storage.bson
 Wired*
 debug.log
 .vscode/
+/node_modules
