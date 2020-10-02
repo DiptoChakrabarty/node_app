@@ -4,8 +4,8 @@
   <ul class="blog-card-container">
     <% blogs.forEach(function(blog) { %>
     <article class="blog-card">
+      <img src="<%= blog.image %>" width="300px" height="150px" />
       <h2 class="blog-card-title"><%= blog.title %></h2>
-      <img src="<%= blog.image %>" />
       <p class="blog-card-content"><%= blog.body.substring(0,100) %></p>
       <a class="blog-card-link" href="/blogs/<%= blog._id %>">Read More</a>
     </article>

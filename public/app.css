@@ -4,6 +4,11 @@ body {
   font-size: 14px;
   background: #0e1515;
 }
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 /***********************************************
 ************************************************
 BLOG SUMMARY PAGE STYLES
@@ -33,17 +38,14 @@ BLOG SUMMARY PAGE STYLES
 .blog-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   width: 300px;
-  min-height: 250px;
-  max-height: 350px;
   background: #1d5e65;
   border-radius: 10px;
   word-break: break-word;
   margin: 10px;
-  padding: 1em;
   overflow: hidden;
 }
 .blog-card-title {
@@ -62,6 +64,7 @@ BLOG SUMMARY PAGE STYLES
   border-radius: 10px;
   transition: background-color 0.5s ease;
   background: #fff;
+  margin: 15px 0px;
 }
 .blog-card-link:hover {
   background: #50a3a2;
