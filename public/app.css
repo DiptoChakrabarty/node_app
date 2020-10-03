@@ -1,4 +1,152 @@
-.blognav{
-    margin-bottom: 700px;
+/*PRINCIPAL STYLES*/
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  background: #0e1515;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/***********************************************
+************************************************
+BLOG SUMMARY PAGE STYLES
+************************************************
+************************************************/
+
+.principal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.blog-forum {
+  text-align: center;
+  color: #fff;
+}
+/*BLOG CARD STYLES*/
+.blog-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 90vw;
+  justify-content: center;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  background: #1d5e65;
+  border-radius: 10px;
+  word-break: break-word;
+  margin: 10px;
+  overflow: hidden;
+}
+.blog-card-title {
+  text-align: center;
+}
+.blog-card-content {
+  font-size: 15px;
+  text-align: start;
+  padding: 0 0 0 10px;
+}
+.blog-card-link {
+  max-width: 110px;
+  color: black;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  background: #fff;
+  margin: 15px 0px;
+}
+.blog-card-link:hover {
+  background: #50a3a2;
+  color: #fff;
+}
+/***********************************************
+************************************************
+BLOG ENTRY PAGE STYLES
+************************************************
+************************************************/
+.ui.fixed.menu,
+.ui[class*="top fixed"].menu {
+  position: relative;
 }
 
+/***********************************************
+************************************************
+BLOG COMMENT PAGE STYLES
+************************************************
+************************************************/
+.comment-btn {
+  background: #084e9e;
+  padding: 10px;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 15px 0 0 0;
+  transition: background-color 0.5s ease;
+}
+.comment-btn:hover {
+  background: #3ad863;
+}
+.btn-delete {
+  background: red;
+}
+.comment-btn:hover.btn-delete {
+  background: #ea5353;
+}
+.edit-blog {
+  font-size: 18px;
+  margin: 0px 0px 0 8px;
+}
+/*COMMENT STYLES*/
+.comment-body {
+  color: #fff;
+}
+.comment-author {
+  font-size: 24px;
+}
+.comment-content {
+  font-size: 20px;
+}
+.comment-box {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: end;
+  margin: 0 0px 20px 0;
+}
+.paragraph {
+  margin: 15px 0;
+}
+.word-wrap {
+  word-break: break-word;
+}
+.comment-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  text-align: left;
+  min-width: 320px;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.btn-delete-comment {
+  margin-left: 10px;
+}
+.btn-edit-comment {
+  height: 36px;
+}
