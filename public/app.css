@@ -123,12 +123,30 @@ BLOG COMMENT PAGE STYLES
   display: flex;
   width: 300px;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 0 0 10px 0;
-}
-.comment-box a {
-  color: #fff;
+  justify-content: end;
+  margin: 0 0px 20px 0;
 }
 .paragraph {
   margin: 15px 0;
+}
+.word-wrap {
+  word-break: break-word;
+}
+.comment-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  text-align: left;
+  min-width: 320px;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.btn-delete-comment {
+  margin-left: 10px;
+}
+.btn-edit-comment {
+  height: 36px;
 }

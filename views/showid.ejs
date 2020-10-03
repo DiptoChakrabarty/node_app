@@ -1,14 +1,14 @@
 <%- include('partials/header')  %>
 <div class="ui main text container segment">
-    <div class="ui huge header"><%= blog.title %></div>
+    <div class="ui huge header word-wrap"><%= blog.title %></div>
     <div class="ui top attached ">
         <div class="item">
             <img class="ui centered rounded image" src="<%= blog.image %>">
             <div class="content">
                 <span><%= blog.created.toDateString() %></span>
-                <p><strong> Submitted by:  </strong><%= blog.author.username %></p>
+                <p><strong> Submitted by:  </strong class="word-wrap"><%= blog.author.username %></p>
             </div>
-            <div class="paragraph">
+            <div class="paragraph word-wrap">
                 <p> <%= blog.body %> </p>
             </div>
             <% if(currentuser && blog.author.id.equals(currentuser._id)){ %>
@@ -29,22 +29,22 @@
    
 </div>
 
-<div>
+<section class="comment-section">
     <% blog.comments.forEach(function(comment) { %>
         <p class="comment-body">
-            <span class="comment-author"><%= comment.author %>: </span> <span class="comment-content">"<%= comment.content%>"<span>
+            <span class="comment-author"><%= comment.author %>: </span> <span class="comment-content word-wrap">"<%= comment.content%>"<span>
         </p>
         
         <div class="comment-box">
-            <a  class="comment-btn" href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
+            <a  class="comment-btn btn-edit-comment" href="/blogs/<%= blog._id %>/comms/<%= comment._id %>/edit">Edit Comment</a>
             <form action="/blogs/<%= blog._id %>/comms/<%= comment._id %>?_method=DELETE" method="POST">
-                <button class="comment-btn btn-delete">Delete Comment</button>
+                <button class="comment-btn btn-delete  btn-delete-comment">Delete Comment</button>
         </div>
         </form>
   <% }); %>
 
  
-</div>
+</section>
 
 
 <%- include('partials/footer')  %>
