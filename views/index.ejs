@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 <h1 class="blog-forum">Welcome to Forum</h1>
 <div class="principal-container">
-  <ul class="blog-card-container">
+  <section class="blog-card-container">
     <% blogs.forEach(function(blog) { %>
     <article class="blog-card">
       <img src="<%= blog.image %>" width="300px" height="150px" />
@@ -11,5 +11,5 @@
     </article>
 
     <% }) %> <%- include('partials/footer') %>
-  </ul>
+  </section>
 </div>
