@@ -9,26 +9,28 @@
     method="POST"
   >
     <div class="field">
-      <label>Title</label>
+      <label for="title">Title</label>
       <input
         type="text"
         name="blog[title]"
         value="<%= blog.title %>"
+        id="title"
         required
       />
     </div>
     <div class="field">
-      <label>Image</label>
+      <label for="image">Image</label>
       <input
         type="text"
         name="blog[image]"
         value="<%= blog.image %>"
+        id="image"
         required
       />
     </div>
     <div class="field">
-      <label>Description</label>
-      <textarea name="blog[body]" cols="30" rows="10" required>
+      <label for="description">Description</label>
+      <textarea name="blog[body]" cols="30" rows="10" id="description" required>
 <%= blog.body %></textarea
       >
     </div>
