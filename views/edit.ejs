@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
-<div class="ui main text container segment">
-  <div class="ui huge header">Edit Blog: <%=blog.title %></div>
+<div class="ui main text container segment new-blog-padding">
+  <div class="ui huge header word-wrap">Edit Blog: <%=blog.title %></div>
   <form
     class="ui form"
     action="/blogs/<%= blog._id%>?_method=PUT"
