@@ -185,6 +185,7 @@ BLOG COMMENT PAGE STYLES
   justify-content: center;
   align-items: center;
   margin-top: 1px;
+  color: #fff;
 }
 .github-logo {
   background: url("./GitHub-Mark-Light-32px.png");
