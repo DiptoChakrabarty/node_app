@@ -112,6 +112,10 @@ BLOG COMMENT PAGE STYLES
   font-size: 18px;
   margin: 0px 0px 0 8px;
 }
+
+.edit-blog:hover {
+  color: #fff;
+}
 /*COMMENT STYLES*/
 .comment-body {
   color: #fff;
