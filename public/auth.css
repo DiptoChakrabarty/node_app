@@ -217,3 +217,15 @@ body {
   bottom: 0px;
   z-index: 5;
 }
+.links-container {
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+.links-container a {
+  text-decoration: none;
+  color: #fff;
+}
