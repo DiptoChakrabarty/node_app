@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-<div class="ui main text container segment">
-  <div class="ui huge header">Add Comment for: <%= blog.title %></div>
+<div class="ui main text container segment new-blog-padding">
+  <div class="ui huge header word-wrap">Add Comment for: <%= blog.title %></div>
   <form class="ui form" action="/blogs/<%= blog._id %>/comments" method="POST">
     <div class="field">
       <label>Comment </label>
