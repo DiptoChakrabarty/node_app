@@ -7,13 +7,19 @@
     method="POST"
   >
     <div class="field">
-      <label>Comment</label>
-      <textarea name="comment[content]" cols="30" rows="10" required>
+      <label for="comment">Comment</label>
+      <textarea
+        name="comment[content]"
+        cols="30"
+        rows="10"
+        id="comment"
+        required
+      >
 <%= comments.content %></textarea
       >
     </div>
 
-    <input class="ui violet big basic button" type="submit" />
+    <button class="ui violet big basic button" type="submit">Send</button>
   </form>
 </div>
 
