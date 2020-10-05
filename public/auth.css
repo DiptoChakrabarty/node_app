@@ -184,7 +184,7 @@ body {
 }
 
 .bg-bubbles li:nth-child(10) {
-  left: 90%;
+  left: 60%;
   width: 160px;
   height: 160px;
 
@@ -196,7 +196,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-1200px) rotate(600deg);
+    transform: translateY(-1700px) rotate(600deg);
   }
 }
 @keyframes square {
@@ -204,6 +204,6 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-1200px) rotate(600deg);
+    transform: translateY(-1700px) rotate(600deg);
   }
 }
