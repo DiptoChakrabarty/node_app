@@ -97,12 +97,13 @@ BLOG COMMENT PAGE STYLES
   cursor: pointer;
   margin: 15px 0 0 0;
   transition: background-color 0.5s ease;
+  font-size: 18px;
 }
 .comment-btn:hover {
   background: #3ad863;
 }
 .btn-delete {
-  background: red;
+  background: rgb(189 28 28);
 }
 .comment-btn:hover.btn-delete {
   background: #ea5353;
@@ -192,6 +193,6 @@ BLOG COMMENT PAGE STYLES
 .fix-position {
   position: relative;
 }
-.new-blog-padding {
+.comment-padding {
   margin-bottom: 900px !important;
 }
