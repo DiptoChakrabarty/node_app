@@ -3,15 +3,25 @@
   <div class="ui huge header">Add Comment for <%=blog.title %></div>
   <form class="ui form" action="/blogs/<%= blog._id %>/comments" method="POST">
     <div class="field">
-      <label>Content</label>
-      <input type="text" name="comments[content]" placeholder="content" />
+      <label for="content">Content</label>
+      <input
+        type="text"
+        name="comments[content]"
+        placeholder="content"
+        id="content"
+      />
     </div>
     <div class="field">
-      <label>Author</label>
-      <input type="text" name="comments[author]" placeholder="author" />
+      <label for="author">Author</label>
+      <input
+        type="text"
+        name="comments[author]"
+        placeholder="author"
+        id="author"
+      />
     </div>
 
-    <input class="ui violet big basic button" type="submit" />
+    <button class="ui violet big basic button" type="submit">Send</button>
   </form>
 </div>
 
