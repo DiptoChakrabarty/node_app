@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url("/wave.svg") no-repeat;
+  background-position-y: bottom;
+  background-position-x: bottom;
+  background-size: contain;
+}
+.nav {
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+}
+.nav a:nth-child(2) {
+  margin: 0 20px;
+}
+.btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background: #499df2;
+  text-align: center;
+  line-height: 2.3;
+  font-weight: bold;
+  transition: background-color, box-shadow 0.4s ease;
+  will-change: auto;
+  box-shadow: 1px 1px 6px -1px grey;
+}
+.btn:hover {
+  background-color: #50a3a2;
+  box-shadow: none;
+}
+.copy-container {
+  position: relative;
+  max-width: 317px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 180px 0 0 15px;
+}
+.copy-body {
+  font-size: 2em;
+}
+.copy-header {
+  text-align: center;
+  margin-top: 10px;
+  color: #1b264f;
+}
+.sing-btn {
+  width: 100%;
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+strong {
+  color: #1b264f;
+}
