@@ -16,14 +16,14 @@ body {
 }
 
 .container {
-  max-width: 500px;
   width: 100%;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*SIGN-UP STYLES*/
 .signup-form {
   padding: 0px;
-  margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
   z-index: 5;
