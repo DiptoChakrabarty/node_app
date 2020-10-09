@@ -1,6 +1,42 @@
-<h1>This is home page</h1>
-
-
-<a href="/signup">SignUp Here</a>
-<a href="/signin">Signin Here</a>
-<a href="/logout">LogOut</a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blog App to upload your blogs and use kubernetes to escalete."
+    />
+    <meta property="og:title" content="Blog App" />
+    <meta
+      property="og:description"
+      content="Blog App to upload your blogs and use kubernetes to escalete."
+    />
+    <meta property="og:site_name" content="Blog App" />
+    <link rel="stylesheet" href="/home.css" />
+    <title>Blog App | Home</title>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <nav class="nav">
+          <a class="btn" href="/logout">Log Out</a>
+          <a class="btn" href="/blogs">Go to Blogs</a>
+        </nav>
+        <h1 class="copy-header">Blog App</h1>
+        <article class="copy-container">
+          <p class="copy-body">
+            <strong>A Simple Web App</strong> which allows users to add their
+            <strong>blogs.</strong>
+          </p>
+          <div class="sing-btn">
+            <a class="btn" href="/signup">Sign Up</a>
+            <a class="btn" href="/signin">Sing In</a>
+          </div>
+        </article>
+        <div class="cube"></div>
+        <div class="triangle"></div>
+      </header>
+    </main>
+  </body>
+</html>

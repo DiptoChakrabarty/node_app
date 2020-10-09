@@ -7,18 +7,22 @@
     <div class="form-body">
 
    
-    <h2 class="form-title">Sign In</h2>
+    <h1 class="form-title">Sign In</h1>
          
             <fieldset class="fieldset">
+              <legend class="legend">Insert your name</legend>
+              <label for="name">Name</label>
                 <input class="signup-form-input" name="username" id="name"  placeholder="Name" type="text"
-                tabindex="1" required autofocus>
-                <label for="name"></label>
+                 required autofocus>
+                
                 </fieldset>
     
 
             <fieldset class="fieldset">
-                <input class="signup-form-input" name="password" placeholder="Password" type="password" tabindex="3" required>
-                <label for="password"></label>
+              <legend class="legend">Insert your password</legend>
+              <label for="password">Password</label>
+                <input class="signup-form-input" name="password" placeholder="Password" id="password" type="password" required>
+                
             </fieldset>
          
           <p>
@@ -40,5 +44,3 @@
       </ul>
     </div>
     </div>
-    
-        <%- include('partials/footer')  %>

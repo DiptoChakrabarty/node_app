@@ -3,70 +3,75 @@
 <div class="container">
   <form action="/signup" method="post" class="signup-form">
     <div class="form-body">
-      <h2 class="form-title">sign up</h2>
+      <h1 class="form-title">sign up</h2>
 
       <fieldset class="fieldset">
+        <legend class="legend">Insert your username</legend>
+        <label for="name">Name</label>
         <input
           class="signup-form-input"
           name="username"
           id="name"
           placeholder="Name"
           type="text"
-          tabindex="1"
           required
           autofocus
         />
-        <label for="name"></label>
+        
       </fieldset>
 
       <fieldset class="fieldset">
+        <legend class="legend">Insert your email</legend>
+        <label for="email">E-mail</label>
         <input
           class="signup-form-input"
           placeholder="Email"
-          type="email"
-          tabindex="3"
+          type="email" id="email"
           required
         />
-        <label for="email"></label>
+        
       </fieldset>
 
       <fieldset class="fieldset">
+        <legend class="legend">Insert your mobile number</legend>
+        <label for="mobile-number">Mobile Number</label>
         <input
           class="signup-form-input"
           placeholder="Mobile Number"
-          type="tel"
-          tabindex="4"
+          type="tel" id="mobile-number"
           required
         />
       </fieldset>
 
       <fieldset class="fieldset">
+        <legend class="legend">Choose your genre</legend>
         <label><input type="radio" name="hosting" value="yes" /> Male</label>
         <label><input type="radio" name="hosting" value="no" /> Female</label>
       </fieldset>
 
       <fieldset class="fieldset">
-        <label>Date Of Birth</label>
+        <legend class="legend">Insert your birthdate</legend>
+        <label for="date-birth">Date of Birth</label>
         <input
           class="signup-form-input"
           name=""
           type="date"
           placeholder="Your Dae Of Birth"
-          type="date"
+          type="date" id="date-birth"
           required
         />
       </fieldset>
 
       <fieldset class="fieldset">
+        <legend class="legend">Create your new password</legend>
+        <label for="password">Password</label>
         <input
           class="signup-form-input"
           name="password"
           placeholder="Password"
-          type="password"
-          tabindex="3"
+          type="password" id="password"
           required
         />
-        <label for="password"></label>
       </fieldset>
 
       <p>
@@ -77,9 +82,9 @@
           id="submit"
         />
       </p>
-      <h3>
+      <h2>
         Have an account? <a class="signin-link" href="/signin">Sign In</a>
-      </h3>
+      </h2>
     </div>
   </form>
 
@@ -96,4 +101,3 @@
     <li></li>
   </ul>
 </div>
-<%- include('partials/footer') %>
